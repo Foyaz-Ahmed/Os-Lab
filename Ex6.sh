@@ -1,12 +1,6 @@
-echo "enter the basic salary:"
-read bsal
-if [ $bsal -lt 1500 ]
-then
-gsal=$((bsal+((bsal/100)*10)+(bsal/100)*90))
-echo "The gross salary : $gsal"
-fi
-if [ $bsal -ge 1500 ]
-then
-gsal=$(((bsal+500)+(bsal/100)*98))
-echo "the gross salary : $gsal"
-fi.
+clear
+echo "enter string"
+read str
+len=`echo $str | wc –c`
+len=`expr $len – 1`
+echo "length of string = $len"

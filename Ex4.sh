@@ -1,11 +1,13 @@
-echo -n "Enter numnber : "
-read n
- 
-rem=$(( $n % 2 ))
- 
-if [ $rem -eq 0 ]
+clear
+echo "enter purchase amount"
+read pa
+if [ $pa –lt 1000 ]
 then
-  echo "$n is even number"
+tax=`echo $pa \* 2 /100 | bc`
+discount=`echo $pa \* 10 / 100 | bc`
 else
-  echo "$n is odd number"
+tax=`echo $pa \* 5 /100 | bc`
+discount=‘echo $pa \* 20 / 100 | bc`
 fi
+amount=`expr $pa + $tax - $discount`
+echo cash payment =$amount

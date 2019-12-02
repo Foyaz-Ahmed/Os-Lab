@@ -1,19 +1,14 @@
-echo "enter first number"
-read first
-echo "enter second number"
-read sec
-echo "enter third number"
-read third
-if [ $first -gt $sec ] ; then
-if [ $first -gt $third ] ; then
-echo -e " $first is greatest number "
-else
-echo -e " $third is greatest number "
-fi
-else
-if [ $sec -gt $third ] ; then
-echo -e " $sec is greatest number "
-else
-echo -e " $third is greatest number "
-fi
-fi
+clear
+echo "enter a and b"
+read a
+read b
+echo "enter operation to be performed"
+read op
+case $op in
++) c=`expr $a + $b` ;;
+-) c=`expr $a - $b` ;;
+/) c=`expr $a / $b` ;;
+\*) c=`expr $a \* $b` ;;
+*) echo "no valid operation specified" ;;
+esac
+echo Result after performing operation on a and b is echo $c
